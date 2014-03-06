@@ -11,6 +11,25 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks("grunt-steroids");
 
-  grunt.registerTask("default", ["steroids-make", "steroids-compile-sass"]);
+  /* compile sass */
+  grunt.initConfig({
+  	watch: {
+  		sass: {
+  			files: ['www/sccs/{,**/}*.{scss,sass}'],
+  			tasks: ['sass']
+  		}
+  	},
+  	sass: {
+  		dist: {
+  			files: {
+  				'dist/css/app.css' : 'www/scss/app.scss'
+  			}
+  		}
+
+  	}
+  });
+
+
+  grunt.registerTask("default", ["steroids-make", "sass"]);
 
 };
