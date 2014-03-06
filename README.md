@@ -8,8 +8,8 @@ Android and iOS.
 
 * [install steroids](http://academy.appgyver.com/courses/2/lessons/32)
 
-    $ steroids update
-    $ steroids connect --watch
+	$ steroids update
+	$ steroids connect --watch
 
 ### Improvements
 
